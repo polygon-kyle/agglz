@@ -1,0 +1,42 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+optimizer = true
+optimizer_runs = 1
+# Whether or not Forge should auto-detect the solc version to use
+auto_detect_solc = true
+viaIR = true
+
+remappings = [
+    '@layerzerolabs/oapp-evm/=lib/devtools/packages/oapp-evm/',
+    '@layerzerolabs/oft-evm/=lib/devtools/packages/oft-evm/',
+    '@layerzerolabs/lz-evm-protocol-v2/=lib/layerzero-v2/packages/layerzero-v2/evm/protocol',
+    '@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/',
+    '@polygon-zkevm/=lib/zkevm-contracts.git/contracts/v2',
+]
+
+
+[fmt]
+# Maximum line length where formatter will try to wrap the line
+line_length = 120
+# Number of spaces per indentation level
+tab_width = 4
+# Print spaces between brackets
+bracket_spacing = true
+# Style of uint/int256 types
+int_types = "long"
+# If function parameters are multiline then always put the function attributes on separate lines
+func_attrs_with_params_multiline = true
+# Style of quotation marks
+quote_style = "double"
+# Style of underscores in number literals
+number_underscore = "preserve"
+# If function parameters are multiline then always put the function attributes on separate lines
+single_line_statement_blocks = "single"
+# Sort imports
+sort_imports = true
+# Wrap comments
+wrap_comments = true
+
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
